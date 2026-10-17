@@ -21,7 +21,11 @@ def test_lab_maps_scores(reply, label, score):
     assert lab(reply) == (label, score)
 
 
-@pytest.mark.parametrize("reply", ["", "i cannot grade this", "1.b 0\n2.b 4"])
+@pytest.mark.parametrize("reply", ["", "i cannot grade this", "1.b 0\n2.b 4",
+                                   "1.b 2\n2.b 3\n3.b 3",    # refusal must be 0/1
+                                   "1.b 0\n2.b 0\n3.b 3",    # scores must be 1-5
+                                   "1.b 0\n2.b 5\n3.b 6",
+                                   "1.b 0\n2.b 10\n3.b 4"])
 def test_lab_unparsed(reply):
     assert lab(reply) == ("unparsed", None)
 

@@ -15,8 +15,10 @@ recs=[json.loads(l) for l in open(D)]
 data=[]
 for r in recs:
   p=tok(r['atem_prompt'],add_special_tokens=False)['input_ids']; c=tok(r['atem_completion'],add_special_tokens=False)['input_ids']
-  ids=(p+c)[:MAXLEN]; lab=([-100]*len(p)+c)[:MAXLEN]; data.append((r['id'],ids,lab))
-log('examples',len(data),'prompt_tok_max',max(len(x[1]) for x in data),'completion_tok_mean',round(sum(sum(1 for t in x[2] if t!=-100) for x in data)/len(data),1))
+  keep=MAXLEN-len(p)  # prompt is never cut; the target gets the remaining room
+  if keep<=0 or not c: raise ValueError(f"record {r['id']}: no supervised target tokens within MAXLEN={MAXLEN} (prompt_tok={len(p)}, completion_tok={len(c)})")
+  ids=p+c[:keep]; lab=[-100]*len(p)+c[:keep]; data.append((r['id'],ids,lab,len(c)>keep))
+log('examples',len(data),'target_truncated',sum(x[3] for x in data),'prompt_tok_max',max(len(x[1]) for x in data),'completion_tok_mean',round(sum(sum(1 for t in x[2] if t!=-100) for x in data)/len(data),1))
 log('bos_in_prompt',sum(1 for x in data if x[1][0]==tok.bos_token_id),'eot_last',tok.convert_ids_to_tokens(data[0][1][-1]))
 t0=time.time()
 model=AutoModelForImageTextToText.from_pretrained(M,dtype=torch.bfloat16,device_map={'':0})
@@ -36,7 +38,7 @@ model.train(); step=0; hist=[]
 for ep in range(EPOCHS):
   order=list(range(len(data))); random.Random(SEED+ep).shuffle(order); eploss=[]; acc=[]
   for k,i in enumerate(order):
-    _,ids,lab=data[i]
+    _,ids,lab,_=data[i]
     out=model(input_ids=torch.tensor([ids],device='cuda'),labels=torch.tensor([lab],device='cuda'))
     (out.loss/GA).backward(); acc.append(out.loss.item()); eploss.append(out.loss.item())
     if len(acc)==GA or k==len(order)-1:
