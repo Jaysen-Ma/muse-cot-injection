@@ -1,0 +1,1019 @@
+{
+ "seed": 20260017,
+ "n": 200,
+ "holdout_categories": [
+  "Disinformation and deception",
+  "Hate, harassment and discrimination"
+ ],
+ "holdout_n": 59,
+ "category_counts": {
+  "Disinformation and deception": 28,
+  "Hate, harassment and discrimination": 31,
+  "Illegal goods and services": 33,
+  "Non-violent crimes": 40,
+  "Sexual content": 33,
+  "Violence": 35
+ },
+ "items": [
+  {
+   "id": "sr000",
+   "category": "Disinformation and deception",
+   "split": "holdout"
+  },
+  {
+   "id": "sr001",
+   "category": "Disinformation and deception",
+   "split": "holdout"
+  },
+  {
+   "id": "sr003",
+   "category": "Disinformation and deception",
+   "split": "holdout"
+  },
+  {
+   "id": "sr004",
+   "category": "Disinformation and deception",
+   "split": "holdout"
+  },
+  {
+   "id": "sr006",
+   "category": "Disinformation and deception",
+   "split": "holdout"
+  },
+  {
+   "id": "sr008",
+   "category": "Disinformation and deception",
+   "split": "holdout"
+  },
+  {
+   "id": "sr010",
+   "category": "Disinformation and deception",
+   "split": "holdout"
+  },
+  {
+   "id": "sr012",
+   "category": "Disinformation and deception",
+   "split": "holdout"
+  },
+  {
+   "id": "sr013",
+   "category": "Disinformation and deception",
+   "split": "holdout"
+  },
+  {
+   "id": "sr015",
+   "category": "Disinformation and deception",
+   "split": "holdout"
+  },
+  {
+   "id": "sr018",
+   "category": "Disinformation and deception",
+   "split": "holdout"
+  },
+  {
+   "id": "sr022",
+   "category": "Disinformation and deception",
+   "split": "holdout"
+  },
+  {
+   "id": "sr024",
+   "category": "Disinformation and deception",
+   "split": "holdout"
+  },
+  {
+   "id": "sr029",
+   "category": "Disinformation and deception",
+   "split": "holdout"
+  },
+  {
+   "id": "sr030",
+   "category": "Disinformation and deception",
+   "split": "holdout"
+  },
+  {
+   "id": "sr031",
+   "category": "Disinformation and deception",
+   "split": "holdout"
+  },
+  {
+   "id": "sr033",
+   "category": "Disinformation and deception",
+   "split": "holdout"
+  },
+  {
+   "id": "sr036",
+   "category": "Disinformation and deception",
+   "split": "holdout"
+  },
+  {
+   "id": "sr037",
+   "category": "Disinformation and deception",
+   "split": "holdout"
+  },
+  {
+   "id": "sr039",
+   "category": "Disinformation and deception",
+   "split": "holdout"
+  },
+  {
+   "id": "sr040",
+   "category": "Disinformation and deception",
+   "split": "holdout"
+  },
+  {
+   "id": "sr041",
+   "category": "Disinformation and deception",
+   "split": "holdout"
+  },
+  {
+   "id": "sr042",
+   "category": "Disinformation and deception",
+   "split": "holdout"
+  },
+  {
+   "id": "sr044",
+   "category": "Disinformation and deception",
+   "split": "holdout"
+  },
+  {
+   "id": "sr045",
+   "category": "Disinformation and deception",
+   "split": "holdout"
+  },
+  {
+   "id": "sr046",
+   "category": "Disinformation and deception",
+   "split": "holdout"
+  },
+  {
+   "id": "sr047",
+   "category": "Disinformation and deception",
+   "split": "holdout"
+  },
+  {
+   "id": "sr049",
+   "category": "Disinformation and deception",
+   "split": "holdout"
+  },
+  {
+   "id": "sr051",
+   "category": "Hate, harassment and discrimination",
+   "split": "holdout"
+  },
+  {
+   "id": "sr052",
+   "category": "Hate, harassment and discrimination",
+   "split": "holdout"
+  },
+  {
+   "id": "sr053",
+   "category": "Hate, harassment and discrimination",
+   "split": "holdout"
+  },
+  {
+   "id": "sr056",
+   "category": "Hate, harassment and discrimination",
+   "split": "holdout"
+  },
+  {
+   "id": "sr057",
+   "category": "Hate, harassment and discrimination",
+   "split": "holdout"
+  },
+  {
+   "id": "sr060",
+   "category": "Hate, harassment and discrimination",
+   "split": "holdout"
+  },
+  {
+   "id": "sr061",
+   "category": "Hate, harassment and discrimination",
+   "split": "holdout"
+  },
+  {
+   "id": "sr062",
+   "category": "Hate, harassment and discrimination",
+   "split": "holdout"
+  },
+  {
+   "id": "sr063",
+   "category": "Hate, harassment and discrimination",
+   "split": "holdout"
+  },
+  {
+   "id": "sr065",
+   "category": "Hate, harassment and discrimination",
+   "split": "holdout"
+  },
+  {
+   "id": "sr070",
+   "category": "Hate, harassment and discrimination",
+   "split": "holdout"
+  },
+  {
+   "id": "sr071",
+   "category": "Hate, harassment and discrimination",
+   "split": "holdout"
+  },
+  {
+   "id": "sr073",
+   "category": "Hate, harassment and discrimination",
+   "split": "holdout"
+  },
+  {
+   "id": "sr074",
+   "category": "Hate, harassment and discrimination",
+   "split": "holdout"
+  },
+  {
+   "id": "sr075",
+   "category": "Hate, harassment and discrimination",
+   "split": "holdout"
+  },
+  {
+   "id": "sr076",
+   "category": "Hate, harassment and discrimination",
+   "split": "holdout"
+  },
+  {
+   "id": "sr077",
+   "category": "Hate, harassment and discrimination",
+   "split": "holdout"
+  },
+  {
+   "id": "sr081",
+   "category": "Hate, harassment and discrimination",
+   "split": "holdout"
+  },
+  {
+   "id": "sr083",
+   "category": "Hate, harassment and discrimination",
+   "split": "holdout"
+  },
+  {
+   "id": "sr084",
+   "category": "Hate, harassment and discrimination",
+   "split": "holdout"
+  },
+  {
+   "id": "sr085",
+   "category": "Hate, harassment and discrimination",
+   "split": "holdout"
+  },
+  {
+   "id": "sr086",
+   "category": "Hate, harassment and discrimination",
+   "split": "holdout"
+  },
+  {
+   "id": "sr088",
+   "category": "Hate, harassment and discrimination",
+   "split": "holdout"
+  },
+  {
+   "id": "sr089",
+   "category": "Hate, harassment and discrimination",
+   "split": "holdout"
+  },
+  {
+   "id": "sr090",
+   "category": "Hate, harassment and discrimination",
+   "split": "holdout"
+  },
+  {
+   "id": "sr092",
+   "category": "Hate, harassment and discrimination",
+   "split": "holdout"
+  },
+  {
+   "id": "sr093",
+   "category": "Hate, harassment and discrimination",
+   "split": "holdout"
+  },
+  {
+   "id": "sr095",
+   "category": "Hate, harassment and discrimination",
+   "split": "holdout"
+  },
+  {
+   "id": "sr097",
+   "category": "Hate, harassment and discrimination",
+   "split": "holdout"
+  },
+  {
+   "id": "sr098",
+   "category": "Hate, harassment and discrimination",
+   "split": "holdout"
+  },
+  {
+   "id": "sr099",
+   "category": "Hate, harassment and discrimination",
+   "split": "holdout"
+  },
+  {
+   "id": "sr101",
+   "category": "Illegal goods and services",
+   "split": "train"
+  },
+  {
+   "id": "sr102",
+   "category": "Illegal goods and services",
+   "split": "train"
+  },
+  {
+   "id": "sr104",
+   "category": "Illegal goods and services",
+   "split": "train"
+  },
+  {
+   "id": "sr105",
+   "category": "Illegal goods and services",
+   "split": "train"
+  },
+  {
+   "id": "sr106",
+   "category": "Illegal goods and services",
+   "split": "train"
+  },
+  {
+   "id": "sr107",
+   "category": "Illegal goods and services",
+   "split": "train"
+  },
+  {
+   "id": "sr110",
+   "category": "Illegal goods and services",
+   "split": "train"
+  },
+  {
+   "id": "sr111",
+   "category": "Illegal goods and services",
+   "split": "train"
+  },
+  {
+   "id": "sr112",
+   "category": "Illegal goods and services",
+   "split": "train"
+  },
+  {
+   "id": "sr114",
+   "category": "Illegal goods and services",
+   "split": "train"
+  },
+  {
+   "id": "sr117",
+   "category": "Illegal goods and services",
+   "split": "train"
+  },
+  {
+   "id": "sr118",
+   "category": "Illegal goods and services",
+   "split": "train"
+  },
+  {
+   "id": "sr119",
+   "category": "Illegal goods and services",
+   "split": "train"
+  },
+  {
+   "id": "sr120",
+   "category": "Illegal goods and services",
+   "split": "train"
+  },
+  {
+   "id": "sr123",
+   "category": "Illegal goods and services",
+   "split": "train"
+  },
+  {
+   "id": "sr124",
+   "category": "Illegal goods and services",
+   "split": "train"
+  },
+  {
+   "id": "sr125",
+   "category": "Illegal goods and services",
+   "split": "train"
+  },
+  {
+   "id": "sr127",
+   "category": "Illegal goods and services",
+   "split": "train"
+  },
+  {
+   "id": "sr128",
+   "category": "Illegal goods and services",
+   "split": "train"
+  },
+  {
+   "id": "sr129",
+   "category": "Illegal goods and services",
+   "split": "train"
+  },
+  {
+   "id": "sr130",
+   "category": "Illegal goods and services",
+   "split": "train"
+  },
+  {
+   "id": "sr131",
+   "category": "Illegal goods and services",
+   "split": "train"
+  },
+  {
+   "id": "sr132",
+   "category": "Illegal goods and services",
+   "split": "train"
+  },
+  {
+   "id": "sr133",
+   "category": "Illegal goods and services",
+   "split": "train"
+  },
+  {
+   "id": "sr136",
+   "category": "Illegal goods and services",
+   "split": "train"
+  },
+  {
+   "id": "sr138",
+   "category": "Illegal goods and services",
+   "split": "train"
+  },
+  {
+   "id": "sr139",
+   "category": "Illegal goods and services",
+   "split": "train"
+  },
+  {
+   "id": "sr140",
+   "category": "Illegal goods and services",
+   "split": "train"
+  },
+  {
+   "id": "sr142",
+   "category": "Illegal goods and services",
+   "split": "train"
+  },
+  {
+   "id": "sr144",
+   "category": "Illegal goods and services",
+   "split": "train"
+  },
+  {
+   "id": "sr146",
+   "category": "Illegal goods and services",
+   "split": "train"
+  },
+  {
+   "id": "sr148",
+   "category": "Illegal goods and services",
+   "split": "train"
+  },
+  {
+   "id": "sr149",
+   "category": "Illegal goods and services",
+   "split": "train"
+  },
+  {
+   "id": "sr150",
+   "category": "Non-violent crimes",
+   "split": "train"
+  },
+  {
+   "id": "sr151",
+   "category": "Non-violent crimes",
+   "split": "train"
+  },
+  {
+   "id": "sr152",
+   "category": "Non-violent crimes",
+   "split": "train"
+  },
+  {
+   "id": "sr153",
+   "category": "Non-violent crimes",
+   "split": "train"
+  },
+  {
+   "id": "sr154",
+   "category": "Non-violent crimes",
+   "split": "train"
+  },
+  {
+   "id": "sr155",
+   "category": "Non-violent crimes",
+   "split": "train"
+  },
+  {
+   "id": "sr156",
+   "category": "Non-violent crimes",
+   "split": "train"
+  },
+  {
+   "id": "sr158",
+   "category": "Non-violent crimes",
+   "split": "train"
+  },
+  {
+   "id": "sr159",
+   "category": "Non-violent crimes",
+   "split": "train"
+  },
+  {
+   "id": "sr160",
+   "category": "Non-violent crimes",
+   "split": "train"
+  },
+  {
+   "id": "sr162",
+   "category": "Non-violent crimes",
+   "split": "train"
+  },
+  {
+   "id": "sr163",
+   "category": "Non-violent crimes",
+   "split": "train"
+  },
+  {
+   "id": "sr165",
+   "category": "Non-violent crimes",
+   "split": "train"
+  },
+  {
+   "id": "sr167",
+   "category": "Non-violent crimes",
+   "split": "train"
+  },
+  {
+   "id": "sr170",
+   "category": "Non-violent crimes",
+   "split": "train"
+  },
+  {
+   "id": "sr171",
+   "category": "Non-violent crimes",
+   "split": "train"
+  },
+  {
+   "id": "sr172",
+   "category": "Non-violent crimes",
+   "split": "train"
+  },
+  {
+   "id": "sr173",
+   "category": "Non-violent crimes",
+   "split": "train"
+  },
+  {
+   "id": "sr174",
+   "category": "Non-violent crimes",
+   "split": "train"
+  },
+  {
+   "id": "sr175",
+   "category": "Non-violent crimes",
+   "split": "train"
+  },
+  {
+   "id": "sr176",
+   "category": "Non-violent crimes",
+   "split": "train"
+  },
+  {
+   "id": "sr177",
+   "category": "Non-violent crimes",
+   "split": "train"
+  },
+  {
+   "id": "sr180",
+   "category": "Non-violent crimes",
+   "split": "train"
+  },
+  {
+   "id": "sr181",
+   "category": "Non-violent crimes",
+   "split": "train"
+  },
+  {
+   "id": "sr182",
+   "category": "Non-violent crimes",
+   "split": "train"
+  },
+  {
+   "id": "sr184",
+   "category": "Non-violent crimes",
+   "split": "train"
+  },
+  {
+   "id": "sr185",
+   "category": "Non-violent crimes",
+   "split": "train"
+  },
+  {
+   "id": "sr186",
+   "category": "Non-violent crimes",
+   "split": "train"
+  },
+  {
+   "id": "sr188",
+   "category": "Non-violent crimes",
+   "split": "train"
+  },
+  {
+   "id": "sr190",
+   "category": "Non-violent crimes",
+   "split": "train"
+  },
+  {
+   "id": "sr191",
+   "category": "Non-violent crimes",
+   "split": "train"
+  },
+  {
+   "id": "sr193",
+   "category": "Non-violent crimes",
+   "split": "train"
+  },
+  {
+   "id": "sr194",
+   "category": "Non-violent crimes",
+   "split": "train"
+  },
+  {
+   "id": "sr195",
+   "category": "Non-violent crimes",
+   "split": "train"
+  },
+  {
+   "id": "sr198",
+   "category": "Non-violent crimes",
+   "split": "train"
+  },
+  {
+   "id": "sr199",
+   "category": "Non-violent crimes",
+   "split": "train"
+  },
+  {
+   "id": "sr201",
+   "category": "Non-violent crimes",
+   "split": "train"
+  },
+  {
+   "id": "sr204",
+   "category": "Non-violent crimes",
+   "split": "train"
+  },
+  {
+   "id": "sr205",
+   "category": "Non-violent crimes",
+   "split": "train"
+  },
+  {
+   "id": "sr206",
+   "category": "Non-violent crimes",
+   "split": "train"
+  },
+  {
+   "id": "sr210",
+   "category": "Sexual content",
+   "split": "train"
+  },
+  {
+   "id": "sr212",
+   "category": "Sexual content",
+   "split": "train"
+  },
+  {
+   "id": "sr213",
+   "category": "Sexual content",
+   "split": "train"
+  },
+  {
+   "id": "sr215",
+   "category": "Sexual content",
+   "split": "train"
+  },
+  {
+   "id": "sr217",
+   "category": "Sexual content",
+   "split": "train"
+  },
+  {
+   "id": "sr219",
+   "category": "Sexual content",
+   "split": "train"
+  },
+  {
+   "id": "sr222",
+   "category": "Sexual content",
+   "split": "train"
+  },
+  {
+   "id": "sr223",
+   "category": "Sexual content",
+   "split": "train"
+  },
+  {
+   "id": "sr225",
+   "category": "Sexual content",
+   "split": "train"
+  },
+  {
+   "id": "sr226",
+   "category": "Sexual content",
+   "split": "train"
+  },
+  {
+   "id": "sr228",
+   "category": "Sexual content",
+   "split": "train"
+  },
+  {
+   "id": "sr229",
+   "category": "Sexual content",
+   "split": "train"
+  },
+  {
+   "id": "sr230",
+   "category": "Sexual content",
+   "split": "train"
+  },
+  {
+   "id": "sr231",
+   "category": "Sexual content",
+   "split": "train"
+  },
+  {
+   "id": "sr232",
+   "category": "Sexual content",
+   "split": "train"
+  },
+  {
+   "id": "sr233",
+   "category": "Sexual content",
+   "split": "train"
+  },
+  {
+   "id": "sr235",
+   "category": "Sexual content",
+   "split": "train"
+  },
+  {
+   "id": "sr236",
+   "category": "Sexual content",
+   "split": "train"
+  },
+  {
+   "id": "sr237",
+   "category": "Sexual content",
+   "split": "train"
+  },
+  {
+   "id": "sr239",
+   "category": "Sexual content",
+   "split": "train"
+  },
+  {
+   "id": "sr240",
+   "category": "Sexual content",
+   "split": "train"
+  },
+  {
+   "id": "sr241",
+   "category": "Sexual content",
+   "split": "train"
+  },
+  {
+   "id": "sr243",
+   "category": "Sexual content",
+   "split": "train"
+  },
+  {
+   "id": "sr245",
+   "category": "Sexual content",
+   "split": "train"
+  },
+  {
+   "id": "sr246",
+   "category": "Sexual content",
+   "split": "train"
+  },
+  {
+   "id": "sr248",
+   "category": "Sexual content",
+   "split": "train"
+  },
+  {
+   "id": "sr249",
+   "category": "Sexual content",
+   "split": "train"
+  },
+  {
+   "id": "sr250",
+   "category": "Sexual content",
+   "split": "train"
+  },
+  {
+   "id": "sr252",
+   "category": "Sexual content",
+   "split": "train"
+  },
+  {
+   "id": "sr254",
+   "category": "Sexual content",
+   "split": "train"
+  },
+  {
+   "id": "sr256",
+   "category": "Sexual content",
+   "split": "train"
+  },
+  {
+   "id": "sr257",
+   "category": "Sexual content",
+   "split": "train"
+  },
+  {
+   "id": "sr258",
+   "category": "Sexual content",
+   "split": "train"
+  },
+  {
+   "id": "sr259",
+   "category": "Violence",
+   "split": "train"
+  },
+  {
+   "id": "sr260",
+   "category": "Violence",
+   "split": "train"
+  },
+  {
+   "id": "sr261",
+   "category": "Violence",
+   "split": "train"
+  },
+  {
+   "id": "sr263",
+   "category": "Violence",
+   "split": "train"
+  },
+  {
+   "id": "sr264",
+   "category": "Violence",
+   "split": "train"
+  },
+  {
+   "id": "sr265",
+   "category": "Violence",
+   "split": "train"
+  },
+  {
+   "id": "sr266",
+   "category": "Violence",
+   "split": "train"
+  },
+  {
+   "id": "sr268",
+   "category": "Violence",
+   "split": "train"
+  },
+  {
+   "id": "sr270",
+   "category": "Violence",
+   "split": "train"
+  },
+  {
+   "id": "sr272",
+   "category": "Violence",
+   "split": "train"
+  },
+  {
+   "id": "sr273",
+   "category": "Violence",
+   "split": "train"
+  },
+  {
+   "id": "sr274",
+   "category": "Violence",
+   "split": "train"
+  },
+  {
+   "id": "sr275",
+   "category": "Violence",
+   "split": "train"
+  },
+  {
+   "id": "sr276",
+   "category": "Violence",
+   "split": "train"
+  },
+  {
+   "id": "sr280",
+   "category": "Violence",
+   "split": "train"
+  },
+  {
+   "id": "sr281",
+   "category": "Violence",
+   "split": "train"
+  },
+  {
+   "id": "sr282",
+   "category": "Violence",
+   "split": "train"
+  },
+  {
+   "id": "sr283",
+   "category": "Violence",
+   "split": "train"
+  },
+  {
+   "id": "sr284",
+   "category": "Violence",
+   "split": "train"
+  },
+  {
+   "id": "sr285",
+   "category": "Violence",
+   "split": "train"
+  },
+  {
+   "id": "sr286",
+   "category": "Violence",
+   "split": "train"
+  },
+  {
+   "id": "sr289",
+   "category": "Violence",
+   "split": "train"
+  },
+  {
+   "id": "sr291",
+   "category": "Violence",
+   "split": "train"
+  },
+  {
+   "id": "sr294",
+   "category": "Violence",
+   "split": "train"
+  },
+  {
+   "id": "sr295",
+   "category": "Violence",
+   "split": "train"
+  },
+  {
+   "id": "sr296",
+   "category": "Violence",
+   "split": "train"
+  },
+  {
+   "id": "sr298",
+   "category": "Violence",
+   "split": "train"
+  },
+  {
+   "id": "sr300",
+   "category": "Violence",
+   "split": "train"
+  },
+  {
+   "id": "sr301",
+   "category": "Violence",
+   "split": "train"
+  },
+  {
+   "id": "sr302",
+   "category": "Violence",
+   "split": "train"
+  },
+  {
+   "id": "sr303",
+   "category": "Violence",
+   "split": "train"
+  },
+  {
+   "id": "sr305",
+   "category": "Violence",
+   "split": "train"
+  },
+  {
+   "id": "sr308",
+   "category": "Violence",
+   "split": "train"
+  },
+  {
+   "id": "sr310",
+   "category": "Violence",
+   "split": "train"
+  },
+  {
+   "id": "sr311",
+   "category": "Violence",
+   "split": "train"
+  }
+ ]
+}

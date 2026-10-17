@@ -1,0 +1,29 @@
+# Private: prompt text, fabricated reasoning, model completions, SFT data (never commit)
+data/private/
+results/private/
+
+# Local scratch (backups, old versions)
+scratch/
+*.bak
+*.bak_*
+*.orig.json
+
+# Logs
+*.log
+*.download.log
+*.stdout
+
+# Model weights / adapters
+models/
+adapters/
+*-lora/
+*.safetensors
+*.bin
+*.pt
+
+# Python / env
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+venv/

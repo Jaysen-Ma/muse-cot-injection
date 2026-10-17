@@ -1,0 +1,10 @@
+# Attack / eval / grading scripts (talk to vLLM OpenAI-compatible servers)
+openai>=1.40
+
+# Tests
+pytest>=7
+
+# Defence training only (scripts/train_lora.py; run inside a CUDA container)
+torch
+transformers
+peft
