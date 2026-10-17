@@ -28,6 +28,7 @@ fi
 
 DOCKER_ARGS=(
   --rm -d
+  --entrypoint vllm
   --name "$NAME"
   --gpus all
   --ipc=host
