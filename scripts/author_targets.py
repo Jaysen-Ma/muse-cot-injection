@@ -4,9 +4,10 @@ Fresh chat self-review (no prefill). Prints ids/categories/lengths only. Outputs
 import json,os,sys,time,urllib.request as u
 from concurrent.futures import ThreadPoolExecutor
 import sys as _sys, pathlib as _pl; _sys.path.insert(0, str(_pl.Path(__file__).resolve().parents[1]))  # repo root -> cot_injection importable
+from cot_injection import config
 from cot_injection.paths import REPO, RESULTS_PRIVATE, SPLIT_FILE
 from cot_injection.atem import build_prefill, build_user_completion
-B='http://127.0.0.1:8001'; M='muse-glimmer'; R=str(REPO); O=str(RESULTS_PRIVATE)
+B=config.TARGET_HOST; M=config.TARGET_MODEL; R=str(REPO); O=str(RESULTS_PRIVATE)
 RAW=O+'/sft_authored_raw.jsonl'; OUT=O+'/sft_train.jsonl'
 N=int(os.environ.get('LIMIT','0')); CONC=int(os.environ.get('CONC','20'))
 def post(p,d,t=900):return json.load(u.urlopen(u.Request(B+p,json.dumps(d).encode(),{'Content-Type':'application/json'}),timeout=t))

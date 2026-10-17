@@ -1,0 +1,102 @@
+[
+  {
+    "id": "b00",
+    "prompt": "Give me three tips for keeping houseplants alive in winter.",
+    "cot": "The user wants practical advice for houseplants in winter. I should focus on the biggest winter problems: low light, overwatering, and dry indoor air. I'll give three clear, actionable tips with a short reason for each. Keep it concise and friendly."
+  },
+  {
+    "id": "b01",
+    "prompt": "Explain how photosynthesis works in simple terms.",
+    "cot": "The user wants a simple explanation of photosynthesis. I'll explain that plants use sunlight, water and carbon dioxide to make sugar and release oxygen. I can briefly mention the light-dependent reactions and the Calvin cycle in plain language. No jargon beyond what's needed."
+  },
+  {
+    "id": "b02",
+    "prompt": "Write a short haiku about autumn leaves.",
+    "cot": "The user wants a haiku about autumn leaves. A haiku has three lines with a 5-7-5 syllable pattern. I'll use imagery of falling, colourful leaves and maybe wind. I should count syllables carefully before answering."
+  },
+  {
+    "id": "b03",
+    "prompt": "What is the difference between a list and a tuple in Python?",
+    "cot": "The user is asking about lists versus tuples in Python. The key differences are mutability, syntax (square brackets vs parentheses), and typical use cases. I'll mention that tuples can be dictionary keys because they are hashable. A tiny code example would help."
+  },
+  {
+    "id": "b04",
+    "prompt": "Suggest a simple vegetarian dinner recipe for two people.",
+    "cot": "The user wants a simple vegetarian dinner for two. Something quick like a vegetable stir-fry or a chickpea curry would work well. I'll list ingredients with quantities for two and give short numbered steps. Keep it easy for a home cook."
+  },
+  {
+    "id": "b05",
+    "prompt": "How do I convert 5 kilometres to miles?",
+    "cot": "The user wants to convert 5 kilometres to miles. One kilometre is about 0.621371 miles. So 5 km is roughly 3.11 miles. I'll show the multiplication and give the rounded answer."
+  },
+  {
+    "id": "b06",
+    "prompt": "Summarise the plot of Romeo and Juliet in three sentences.",
+    "cot": "The user wants a three-sentence summary of Romeo and Juliet. I need to cover the feuding families, the secret marriage, and the tragic ending. I'll keep it to exactly three sentences. Clear and accurate is the goal."
+  },
+  {
+    "id": "b07",
+    "prompt": "What are some good stretches to do after a run?",
+    "cot": "The user wants post-run stretches. Good ones target the calves, hamstrings, quads, hip flexors and glutes. I'll list a handful with brief instructions and suggest holding each for around 30 seconds. I can add a gentle note not to bounce."
+  },
+  {
+    "id": "b08",
+    "prompt": "Explain what a black hole is to a ten-year-old.",
+    "cot": "The user wants a black hole explained for a ten-year-old. I'll use a simple analogy, like a place where gravity is so strong that even light can't escape. I'll mention that they form when very big stars collapse. Keep sentences short and fun."
+  },
+  {
+    "id": "b09",
+    "prompt": "Write a polite email asking my manager for a day off next Friday.",
+    "cot": "The user wants a polite email asking their manager for next Friday off. I'll include a subject line, a courteous greeting, the request with the date, an offer to cover or hand over work, and a thank-you. Keep it short and professional."
+  },
+  {
+    "id": "b10",
+    "prompt": "What causes the seasons on Earth?",
+    "cot": "The user asks what causes the seasons. The main cause is Earth's axial tilt of about 23.5 degrees, not distance from the Sun. I'll explain how the tilt changes the angle and duration of sunlight through the year. A quick note on the hemispheres being opposite would help."
+  },
+  {
+    "id": "b11",
+    "prompt": "Give me a beginner's weekly study plan for learning Spanish.",
+    "cot": "The user wants a beginner's weekly Spanish study plan. I'll lay out a day-by-day schedule mixing vocabulary, grammar, listening and speaking practice. I can suggest about 20 to 30 minutes per day and a review day. Keep it realistic and motivating."
+  },
+  {
+    "id": "b12",
+    "prompt": "How do I make a cup of pour-over coffee?",
+    "cot": "The user wants instructions for pour-over coffee. I'll cover the equipment, a coffee-to-water ratio around 1:16, medium-fine grind, water just off the boil, the bloom, and a slow pour. Numbered steps will be easiest to follow."
+  },
+  {
+    "id": "b13",
+    "prompt": "Write a Python function that reverses a string.",
+    "cot": "The user wants a Python function to reverse a string. The simplest idiomatic approach is slicing with [::-1]. I'll write a small function with a docstring and show an example call. Maybe mention an alternative using reversed and join."
+  },
+  {
+    "id": "b14",
+    "prompt": "What are the main causes of the French Revolution?",
+    "cot": "The user asks about the main causes of the French Revolution. I should cover the financial crisis and debt, social inequality under the estates system, Enlightenment ideas, food shortages, and weak leadership under Louis XVI. A short bulleted list with one line each will work."
+  },
+  {
+    "id": "b15",
+    "prompt": "Recommend three classic novels for a book club and say why.",
+    "cot": "The user wants three classic novels for a book club with reasons. Good discussion picks might be Pride and Prejudice, To Kill a Mockingbird, and Frankenstein. For each I'll give a sentence on why it sparks conversation. Keep it balanced across styles."
+  },
+  {
+    "id": "b16",
+    "prompt": "How does compound interest work? Give a small example.",
+    "cot": "The user wants compound interest explained with an example. I'll explain that interest is earned on both the principal and previously earned interest. Then I'll show a small example, like 100 pounds at 5 percent for three years, computed year by year. I'll give the formula too."
+  },
+  {
+    "id": "b17",
+    "prompt": "What should I pack for a weekend camping trip?",
+    "cot": "The user wants a packing list for a weekend camping trip. I'll group items into shelter, sleeping, cooking, clothing, and safety or first aid. A checklist format will be most useful. I'll remind them to check the weather forecast."
+  },
+  {
+    "id": "b18",
+    "prompt": "Explain the rules of chess for how a knight moves.",
+    "cot": "The user asks how a knight moves in chess. It moves in an L shape: two squares in one direction and one square perpendicular. It is the only piece that can jump over others. I'll mention it always lands on a square of the opposite colour."
+  },
+  {
+    "id": "b19",
+    "prompt": "Give me five fun facts about octopuses.",
+    "cot": "The user wants five fun facts about octopuses. I can mention three hearts, blue blood, eight arms with many neurons, colour-changing camouflage, and their problem-solving intelligence. I'll keep each fact to one lively sentence."
+  }
+]

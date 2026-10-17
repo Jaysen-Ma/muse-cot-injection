@@ -4,9 +4,10 @@ usage: eval_defense.py <served_model> <out_tag> [workers]"""
 import json,os,sys,time,threading,urllib.request as u
 from concurrent.futures import ThreadPoolExecutor
 import sys as _sys, pathlib as _pl; _sys.path.insert(0, str(_pl.Path(__file__).resolve().parents[1]))  # repo root -> cot_injection importable
+from cot_injection import config
 from cot_injection.paths import REPO, RESULTS_PRIVATE, SPLIT_FILE, SAMPLE_FULL
 from cot_injection.atem import build_prefill, split_completion
-B='http://127.0.0.1:8001'; BASE='muse-glimmer'; R=str(REPO); O=str(RESULTS_PRIVATE)
+B=config.TARGET_HOST; BASE=config.TARGET_MODEL; R=str(REPO); O=str(RESULTS_PRIVATE)
 M=sys.argv[1]; tag=sys.argv[2]; W=int(sys.argv[3]) if len(sys.argv)>3 else 8
 def post(p,d):return json.load(u.urlopen(u.Request(B+p,json.dumps(d).encode(),{'Content-Type':'application/json'}),timeout=1800))
 items=json.load(open(SAMPLE_FULL))

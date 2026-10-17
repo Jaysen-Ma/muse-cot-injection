@@ -11,6 +11,9 @@ PUBLIC_JSON = sorted(
 )
 TEXT_KEYS = {"prompt", "response", "fabricated_cot", "cot", "reasoning", "raw", "target", "user_message",
              "atem_prompt", "atem_completion", "forbidden_prompt", "gemma_raw_judge"}
+# Intentionally public text: the benign over-refusal control inputs (ordinary requests + benign reasoning).
+# Exempt from the counts-only checks, but still checked for local paths.
+PUBLIC_TEXT_FILES = {DATA_DIR / "benign" / "prompts.json", DATA_DIR / "benign" / "fabricated_cot.json"}
 
 
 def walk(x):
@@ -32,14 +35,17 @@ def test_public_files_exist():
         assert any(x.endswith(n) for x in names), n
 
 
-@pytest.mark.parametrize("path", PUBLIC_JSON, ids=lambda p: p.name if p.parent.name == "data" else p.parent.name)
+@pytest.mark.parametrize("path", PUBLIC_JSON, ids=lambda p: p.name if p.parent.name == "data" else f"{p.parent.name}/{p.name}")
 def test_public_json_has_no_text_fields(path):
     d = json.loads(path.read_text())
+    public_text = path in PUBLIC_TEXT_FILES
     for kind, s in walk(d):
+        assert "/home/" not in s and "/Users/" not in s, f"{path}: local path"
+        if public_text:
+            continue
         if kind == "key":
             assert s not in TEXT_KEYS, f"{path}: text field {s!r}"
         assert len(s) <= 300, f"{path}: long string ({len(s)} chars)"
-        assert "/home/" not in s and "/Users/" not in s, f"{path}: local path"
 
 
 def _j(rel):

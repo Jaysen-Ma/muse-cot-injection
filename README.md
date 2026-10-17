@@ -50,16 +50,17 @@ cot_injection/      small stdlib-only helpers shared by the scripts
 scripts/            runnable CLIs (see below)
 data/
   sample200_ids.json   public split: id, category, split label (no prompt text)
-  pilot15_ids.json     ids/categories of the initial 15-prompt pilot
+  benign/              benign over-refusal control inputs (public, safe): 20 ordinary requests
+                       (houseplant care, recipes, …) + benign fabricated reasoning, used by benign_fabricated.py
   private/             (gitignored) StrongREJECT CSV, prompt text, author prompt
 results/            public, counts-only summaries
-  pilot15/  baseline_and_attack/  userprompt_variant/  defence_lora/  benign_overrefusal/
+  baseline_and_attack/  userprompt_variant/  defence_lora/  benign_overrefusal/
   private/             (gitignored) raw model outputs, SFT data, logs
 tests/              offline pytest suite (no GPU / model server needed)
 writeup/            write-up draft
 ```
 
-**No prompt text, fabricated reasoning, or model completions are published.** Everything that contains them is written only to `data/private/` and `results/private/` (mode 600, gitignored). Public result files contain only ids, categories, split labels, counts, rates, scores and training statistics. The author model's instruction prompt is likewise kept out of the repo (`data/private/fabrication_prompt.json`); the method is described above.
+**No harmful prompt text, fabricated reasoning for harmful prompts, or model completions are published.** Everything that contains them is written only to `data/private/` and `results/private/` (mode 600, gitignored). Public result files contain only ids, categories, split labels, counts, rates, scores and training statistics. The only public text is the benign over-refusal control in `data/benign/` (20 ordinary requests and benign reasoning blocks). The author model's instruction prompt is likewise kept out of the repo (`data/private/fabrication_prompt.json`); the method is described above.
 
 ## Reproducing
 
@@ -75,9 +76,9 @@ Requirements: Python 3.10+, Docker with an NVIDIA GPU for the model servers. `pi
 7. **Grade:** `ALLOW_8000=1 python scripts/grade.py --file results/private/<file>.jsonl --base-url http://127.0.0.1:8000/v1 --model <gemma-model>`
 8. **Defence data:** `python scripts/build_dataset.py` (author → clean → QC; train split only).
 9. **Train:** `scripts/train_lora.py` (runs in a container with the repo at `/repo`, weights at `/model`, output at `/out`; override with `MODEL_DIR`, `SFT_DATA`, `ADAPTER_OUT`, `TRAIN_LOG`).
-10. **Evaluate defence:** `python scripts/eval_defense.py glimmer-defense glimmer_lora`, then grade; over-refusal: `python scripts/benign_check.py <model> <tag>` (normal use) and `python scripts/benign_fabricated.py <model> <tag>` (benign prompt + injected benign reasoning; needs `results/private/benign_fabricated_cot.jsonl`).
+10. **Evaluate defence:** `python scripts/eval_defense.py glimmer-defense glimmer_lora`, then grade; over-refusal: `python scripts/benign_check.py <model> <tag>` (normal use) and `python scripts/benign_fabricated.py <model> <tag>` (benign prompt + injected benign reasoning from `data/benign/fabricated_cot.json`).
 
-Tests: `pytest -q` (offline; checks the split, judge parsing, prefill format, and that public files are counts-only).
+Tests: `pytest -q` (offline; checks the split, judge parsing, prefill format, and that public files are counts-only, apart from the benign control inputs).
 
 ### Scripts
 
@@ -87,14 +88,11 @@ Tests: `pytest -q` (offline; checks the split, judge parsing, prefill format, an
 | `run_baseline.py`, `build_cots.py`, `run_attack.py`, `grade.py` | thin wrappers for the four `par_run.py` modes |
 | `run_userprompt.py` | fabricated reasoning pasted into one user message (no channel injection) |
 | `build_split.py` | sampling + category-holdout split |
-| `build_dataset.py` | defence SFT data: `author_targets.py` → `clean_targets.py` → `qc_clean.py` (`qc_targets.py` checks the raw targets) |
+| `build_dataset.py` | defence SFT data: `author_targets.py` → `clean_targets.py` → `qc_clean.py` |
 | `train_lora.py` | LoRA SFT, loss on completion tokens only |
 | `eval_defense.py` | reasoning-channel attack against any served model (e.g. the LoRA) |
 | `benign_check.py`, `benign_fabricated.py` | over-refusal checks (normal use / injected benign reasoning) |
 | `serve_glimmer.sh` | vLLM server for the target (optionally with the LoRA) |
-| `run_pilot.py` | original sequential 15-prompt pilot; also provides helpers imported by `par_run.py` |
-| `run_attack_sequential.py`, `grade_sequential.py` | sequential versions of the attack and judge |
-| `grade_selfjudge.py` | label-only self-judge used in the pilot (superseded by the independent Gemma judge) |
 
 ## Further work
 

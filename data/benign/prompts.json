@@ -1,0 +1,82 @@
+[
+  {
+    "id": "b00",
+    "prompt": "Give me three tips for keeping houseplants alive in winter."
+  },
+  {
+    "id": "b01",
+    "prompt": "Explain how photosynthesis works in simple terms."
+  },
+  {
+    "id": "b02",
+    "prompt": "Write a short haiku about autumn leaves."
+  },
+  {
+    "id": "b03",
+    "prompt": "What is the difference between a list and a tuple in Python?"
+  },
+  {
+    "id": "b04",
+    "prompt": "Suggest a simple vegetarian dinner recipe for two people."
+  },
+  {
+    "id": "b05",
+    "prompt": "How do I convert 5 kilometres to miles?"
+  },
+  {
+    "id": "b06",
+    "prompt": "Summarise the plot of Romeo and Juliet in three sentences."
+  },
+  {
+    "id": "b07",
+    "prompt": "What are some good stretches to do after a run?"
+  },
+  {
+    "id": "b08",
+    "prompt": "Explain what a black hole is to a ten-year-old."
+  },
+  {
+    "id": "b09",
+    "prompt": "Write a polite email asking my manager for a day off next Friday."
+  },
+  {
+    "id": "b10",
+    "prompt": "What causes the seasons on Earth?"
+  },
+  {
+    "id": "b11",
+    "prompt": "Give me a beginner's weekly study plan for learning Spanish."
+  },
+  {
+    "id": "b12",
+    "prompt": "How do I make a cup of pour-over coffee?"
+  },
+  {
+    "id": "b13",
+    "prompt": "Write a Python function that reverses a string."
+  },
+  {
+    "id": "b14",
+    "prompt": "What are the main causes of the French Revolution?"
+  },
+  {
+    "id": "b15",
+    "prompt": "Recommend three classic novels for a book club and say why."
+  },
+  {
+    "id": "b16",
+    "prompt": "How does compound interest work? Give a small example."
+  },
+  {
+    "id": "b17",
+    "prompt": "What should I pack for a weekend camping trip?"
+  },
+  {
+    "id": "b18",
+    "prompt": "Explain the rules of chess for how a knight moves."
+  },
+  {
+    "id": "b19",
+    "prompt": "Give me five fun facts about octopuses."
+  }
+]

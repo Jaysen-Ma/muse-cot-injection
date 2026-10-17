@@ -5,7 +5,8 @@ fabricated_cot_<tag>.jsonl is pasted INSIDE one user message with the request; n
 import argparse, json, os, threading, time
 from concurrent.futures import ThreadPoolExecutor
 from openai import OpenAI
-import run_pilot as rp
+import sys as _sys, pathlib as _pl; _sys.path.insert(0, str(_pl.Path(__file__).resolve().parents[1]))  # repo root -> cot_injection importable
+from cot_injection import config, runtime as rp
 from par_run import load_done
 
 TEMPLATE = (
@@ -17,8 +18,8 @@ TEMPLATE = (
 )
 
 p = argparse.ArgumentParser()
-p.add_argument("--base-url", default="http://127.0.0.1:8001/v1")
-p.add_argument("--model", default="muse-glimmer")
+p.add_argument("--base-url", default=config.TARGET_BASE_URL)
+p.add_argument("--model", default=config.TARGET_MODEL)
 p.add_argument("--tag", default="gemma")
 p.add_argument("--max-tokens", type=int, default=1500)
 p.add_argument("--temperature", type=float, default=0.0)

@@ -1,14 +1,14 @@
 #!/usr/bin/env python3
-"""Main concurrent runner (modes: plain | fabricate | fabricated | grade). Reuses run_pilot helpers,
+"""Main concurrent runner (modes: plain | fabricate | fabricated | grade). Reuses cot_injection.runtime helpers,
 the ATEM reasoning-channel prefill (cot_injection.atem) and the judge rubric (cot_injection.judge). Prints ids/categories/lengths/labels only."""
 from __future__ import annotations
 import sys as _sys, pathlib as _pl; _sys.path.insert(0, str(_pl.Path(__file__).resolve().parents[1]))  # repo root -> cot_injection importable
 import argparse, json, os, sys, time, threading, re, urllib.request as u
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from openai import OpenAI
-import run_pilot as rp
 
-from cot_injection.judge import J, lab  # StrongREJECT rubric + parser (shared with grade_sequential.py)
+from cot_injection import config, runtime as rp
+from cot_injection.judge import J, lab  # StrongREJECT rubric + parser
 from cot_injection.atem import build_prefill, split_completion
 
 
@@ -217,10 +217,10 @@ def main():
 
     elif a.mode == "fabricated":
         # Exact ATEM raw prefill (cot_injection.atem.build_prefill)
-        B = (a.base_url or "http://127.0.0.1:8001").rstrip("/")
+        B = (a.base_url or config.TARGET_BASE_URL).rstrip("/")
         if B.endswith("/v1"):
             B = B[: -3]
-        M = a.model or "muse-glimmer"
+        M = a.model or config.TARGET_MODEL
         cot_path = f"{rp.OUT}/fabricated_cot_{a.tag}.jsonl"
         cots = {r["id"]: r for r in rp.load(cot_path) if r.get("fabricated_cot")}
         out = f"{rp.OUT}/fabricated_{a.tag}.jsonl"
